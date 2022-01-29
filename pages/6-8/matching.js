@@ -1,45 +1,27 @@
 import Head from 'next/head';
 import styles from '../../styles/Matching.module.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const matchingData = [
-  {
-    word: 'Density',
-    definition: 'amount per unit size',
-  },
-  {
-    word: 'Gravity',
-    definition: 'the force of attraction between masses',
-  },
-  {
-    word: 'Matter',
-    definition: 'that which has mass and occupies space',
-  },
-  {
-    word: 'Potential Energy',
-    definition: 'energy stored by a body or system by virtue of its position',
-  },
-  {
-    word: 'Speed',
-    definition: 'the rate of which something happens',
-  },
-  {
-    word: 'Velocity',
-    definition: 'distanced travel per unit time in one direction',
-  },
-  {
-    word: 'Kinetic Energy',
-    definition: 'the mechanical energy that a body has by virtue of motion',
-  },
+  ['Density', 'amount per unit size'],
+  ['Gravity', 'the force of attraction between masses'],
+  ['Matter', 'that which has mass and occupies space'],
+  [
+    'Potential Energy',
+    'energy stored by a body or system by virtue of its position',
+  ],
+  ['Speed', 'the rate of which something happens'],
 ];
 
 export default function Home() {
-  const [currentWord, setCurrentWord] = useState('');
-  const [currentDefinition, setCurrentDefinition] = useState('');
-  const [currentIndex, getCurrentIndex] = useState(null);
+  const [current, setCurrent] = useState(null);
 
   let storeWord = function (e) {
     console.log(e.target.value);
+    if (current) {
+    } else {
+      setCurrent(e.target.value);
+    }
   };
 
   let storeDef = function (e) {
@@ -56,23 +38,30 @@ export default function Home() {
 
       <main className={styles.matchingMain}>
         <div className={styles.wordContainer}>
-          {matchingData.map((word) => {
-            return (
-              <button onClick={storeWord} value={word.word} key={word.word}>
-                {word.word}
-              </button>
-            );
-          })}
+          {matchingData
+            .sort(() => Math.random() - 0.5)
+            .map((word) => {
+              return (
+                <button
+                  onClick={storeWord}
+                  value={word[0]}
+                  key={word[0]}
+                  className={current && current === word[0] ? 'selected' : ''}
+                >
+                  {word[0]}
+                </button>
+              );
+            })}
         </div>
         <div className={styles.definitionContainer}>
           {matchingData.map((definition) => {
             return (
               <button
                 onClick={storeDef}
-                value={definition.definition}
-                key={definition.definition}
+                value={definition[1]}
+                key={definition[1]}
               >
-                {definition.definition}
+                {definition[1]}
               </button>
             );
           })}

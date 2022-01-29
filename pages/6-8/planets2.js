@@ -2,6 +2,21 @@ import Head from 'next/head';
 import styles from '../../styles/Planets.module.css';
 import { useState } from 'react';
 
+const planetData = [
+  {
+    question:
+      'Only planet not to be named after a Greek or Roman deity, it was formed 4.54 billion years ago, the densest planet in the solar system',
+    correct: 'Earth',
+    answers: ['Venus', 'Mars', 'Neptune', 'Earth'],
+  },
+  {
+    question:
+      'Home to the tallest mountain in the solar system (Olympus Mons), has the largest dust storms in the solar system, has 2 small moons (Phobos and Deimos)',
+    correct: 'Mars',
+    answers: ['Venus', 'Jupiter', 'Earth', 'Mars'],
+  },
+];
+
 export default function Home() {
   const [textColor, setTextColor] = useState('black');
 
@@ -20,22 +35,22 @@ export default function Home() {
       <main className={styles.planetsMain}>
         <div className={styles.planetsQuestion}>
           <h1>
-            Only planet not to be named after a Greek or Roman deity, it was
-            formed 4.54 billion years ago, the densest planet in the solar
-            system.
+            Home to the tallest mountain in the solar system (Olympus Mons), has
+            the largest dust storms in the solar system, has 2 small moons
+            (Phobos and Deimos)
           </h1>
         </div>
         <div className={styles.planetsAnswers}>
           <button onClick={setColor} value="Venus">
             Venus
           </button>
-          <button onClick={setColor} value="Mars">
+          <button onClick={setColor} value="Mars" style={{ color: textColor }}>
             Mars
           </button>
-          <button onClick={setColor} value="Neptune">
+          <button onClick={setColor} value="Jupiter">
             Neptune
           </button>
-          <button onClick={setColor} value="Earth" style={{ color: textColor }}>
+          <button onClick={setColor} value="Earth">
             Earth
           </button>
         </div>
