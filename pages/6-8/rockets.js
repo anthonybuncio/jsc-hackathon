@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Rockets.module.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 import imgOne from '../../public/rocket/1.png';
 import imgTwo from '../../public/rocket/2.png';

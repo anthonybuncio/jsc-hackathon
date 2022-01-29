@@ -4,48 +4,33 @@ import { useState } from 'react';
 
 const planetData = [
   {
-    word: 'PLANETZZZZZZZ',
-    definition: 'amount per unit size',
+    question:
+      'Does not have any moons or rings, your weight on this planet would be 38% of your weight on earth, a year on this planet is 88 days',
+    correct: 'Mercury',
+    answers: ['Venus', 'Mars', 'Earth', 'Mercury'],
+    video: '../../public/video-bg.mp4',
   },
   {
-    word: 'Gravity',
-    definition: 'the force of attraction between masses',
+    question:
+      'Does not have any moons or rings, a day on this planet is longer than a year, the hottest planet in our solar system',
+    correct: 'Venus',
+    answers: ['Mercury', 'Mars', 'Earth', 'Venus'],
   },
   {
-    word: 'Matter',
-    definition: 'that which has mass and occupies space',
+    question:
+      'Only planet not to be named after a Greek or Roman deity, it was formed 4.54 billion years ago, the densest planet in the solar system',
+    correct: 'Earth',
+    answers: ['Venus', 'Mars', 'Neptune', 'Earth'],
   },
   {
-    word: 'Potential Energy',
-    definition: 'energy stored by a body or system by virtue of its position',
-  },
-  {
-    word: 'Speed',
-    definition: 'the rate of which something happens',
-  },
-  {
-    word: 'Velocity',
-    definition: 'distanced travel per unit time in one direction',
-  },
-  {
-    word: 'Kinetic Energy',
-    definition: 'the mechanical energy that a body has by virtue of motion',
+    question:
+      'Home to the tallest mountain in the solar system (Olympus Mons), has the largest dust storms in the solar system, has 2 small moons (Phobos and Deimos)',
+    correct: 'Mars',
+    answers: ['Venus', 'Jupiter', 'Earth', 'Mars'],
   },
 ];
 
 export default function Home() {
-  const [currentWord, setCurrentWord] = useState('');
-  const [currentDefinition, setCurrentDefinition] = useState('');
-  const [currentIndex, getCurrentIndex] = useState(null);
-
-  let storeWord = function (e) {
-    console.log(e.target.value);
-  };
-
-  let storeDef = function (e) {
-    console.log(e.target.value);
-  };
-
   return (
     <div className={styles.container}>
       <Head>
@@ -54,7 +39,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.planetsMain}></main>
+      <main className={styles.planetsMain}>
+        <div className={styles.planetsQuestion}>
+          <h1>{planetData.question}</h1>
+        </div>
+        <div className={styles.planetsAnswers}></div>
+      </main>
     </div>
   );
 }

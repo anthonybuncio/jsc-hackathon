@@ -2,7 +2,7 @@
   padding: 0 2rem;
 }
 
-.main {
+/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .card {
   margin: 1rem;
@@ -54,20 +54,22 @@
   }
 }
 
-.button {
-  width: 400px;
-  height: 200px;
-  padding-left: 10px;
-  padding-right: 30px;
-  padding-top: 30px;
-  margin: 20px;
+.homeHeader {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.rocketsMain {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.linksList {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.linkItem {
+  list-style: none;
+  padding-right: 20px;
 }

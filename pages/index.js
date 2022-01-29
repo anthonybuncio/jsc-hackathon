@@ -12,22 +12,29 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <video autoPlay loop muted className="w-full h-screen z-10">
-          <source src="../public/video-bg.mp4" type="video/mp4" />
-        </video>
-        <div>
-          <h1>Ready, Set, STEM</h1>
-        </div>
-        <div>
-          <Link href="/community">
-            <button className={styles.card}>Community</button>
-          </Link>
-          <Link href="/bootcamps">
-            <button className={styles.button}>Bootcamps</button>
-          </Link>
-          <Link href="/games">
-            <button className={styles.button}>Games</button>
-          </Link>
+        <div className={styles.homeHeader}>
+          <div>
+            <h1>Ready, Set, STEM</h1>
+          </div>
+          <div>
+            <ul className={styles.linksList}>
+              <li className={styles.linkItem}>
+                <Link href="/community">
+                  <button className={styles.linkButton}>Community</button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/bootcamps">
+                  <button className={styles.linkButton}>Bootcamps</button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/games">
+                  <button className={styles.linkButton}>Games</button>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
     </div>
