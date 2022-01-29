@@ -16,7 +16,7 @@ export default function Home() {
           <h1>Ready, Set, STEM</h1>
         </div>
         <div>
-          <Link href="/6-8/rockets">
+          <Link href="/6-8/rockets" passHref>
             <button className={styles.button}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Rockets</h1>
@@ -24,7 +24,7 @@ export default function Home() {
               </div>
             </button>
           </Link>
-          <Link href="/6-8/matching">
+          <Link href="/6-8/matching" passHref>
             <button className={styles.button}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Word Match</h1>
@@ -32,7 +32,7 @@ export default function Home() {
               </div>
             </button>
           </Link>
-          <Link href="/6-8/planets">
+          <Link href="/6-8/planets" passHref>
             <button className={styles.button}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Planets</h1>

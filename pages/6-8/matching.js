@@ -58,7 +58,7 @@ export default function Home() {
         <div className={styles.wordContainer}>
           {matchingData.map((word) => {
             return (
-              <button onClick={storeWord} value={word.word}>
+              <button onClick={storeWord} value={word.word} key={word.word}>
                 {word.word}
               </button>
             );
@@ -67,7 +67,11 @@ export default function Home() {
         <div className={styles.definitionContainer}>
           {matchingData.map((definition) => {
             return (
-              <button onClick={storeDef} value={definition.definition}>
+              <button
+                onClick={storeDef}
+                value={definition.definition}
+                key={definition.definition}
+              >
                 {definition.definition}
               </button>
             );

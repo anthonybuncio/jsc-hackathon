@@ -19,17 +19,17 @@ export default function Home() {
           <div>
             <ul className={styles.linksList}>
               <li className={styles.linkItem}>
-                <Link href="/community">
+                <Link href="/community" passHref>
                   <button className={styles.linkButton}>Community</button>
                 </Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/bootcamps">
+                <Link href="/bootcamps" passHref>
                   <button className={styles.linkButton}>Bootcamps</button>
                 </Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/games">
+                <Link href="/games" passHref>
                   <button className={styles.linkButton}>Games</button>
                 </Link>
               </li>

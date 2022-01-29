@@ -19,13 +19,13 @@ export default function Home() {
           <h1>Ready, Set, STEM</h1>
         </div>
         <div>
-          <Link href="/1-5">
+          <Link href="/1-5" passHref>
             <button className={styles.card}>1-5</button>
           </Link>
-          <Link href="/6-8">
+          <Link href="/6-8" passHref>
             <button className={styles.button}>6-8</button>
           </Link>
-          <Link href="/9-12">
+          <Link href="/9-12" passHref>
             <button className={styles.button}>9-12</button>
           </Link>
         </div>
