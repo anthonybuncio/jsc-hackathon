@@ -19,14 +19,14 @@ export default function Home() {
           <h1>Ready, Set, STEM</h1>
         </div>
         <div>
-          <Link href="/community">
-            <button className={styles.card}>Community</button>
+          <Link href="/1-5">
+            <button className={styles.card}>1-5</button>
           </Link>
-          <Link href="/bootcamps">
-            <button className={styles.button}>Bootcamps</button>
+          <Link href="/6-8">
+            <button className={styles.button}>6-8</button>
           </Link>
-          <Link href="/games">
-            <button className={styles.button}>Games</button>
+          <Link href="/9-12">
+            <button className={styles.button}>9-12</button>
           </Link>
         </div>
       </main>

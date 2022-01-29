@@ -1,6 +1,36 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
 import { DragDropContext } from 'react-beautiful-dnd';
+import imgOne from '../../public/rocket/1.png';
+import imgTwo from '../../public/rocket/2.png';
+import imgThree from '../../public/rocket/3.png';
+import imgFour from '../../public/rocket/4.png';
+
+const rocketData = [
+  {
+    //bottom - booster rockets
+    index: 1,
+    img: '../../public/rocket/1.png',
+    video: '',
+  },
+  {
+    index: 2,
+    img: '../../public/rocket/2.png',
+    video: '',
+  },
+  {
+    index: 3,
+    img: '../../public/rocket/3.png',
+    video: '',
+  },
+  {
+    //top - orion
+    index: 4,
+    img: '../../public/rocket/4.png',
+    video: '',
+  },
+];
 
 export default function Home() {
   return (
@@ -13,7 +43,28 @@ export default function Home() {
 
       <main className={styles.rocketsMain}>
         <div className={styles.storyContainer}></div>
-        <div className={styles.rocketContainer}></div>
+        <div className={styles.rocketContainer}>
+          <div className={styles.rocketParts}>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '20%',
+              }}
+            >
+              <Image
+                alt="Image Alt"
+                src={imgOne}
+                layout="fill"
+                objectFit="contain" // Scale your image down to fit into the container
+              />
+            </div>
+            <Image src={imgTwo} width={100} />
+            <Image src={imgThree} width={100} />
+            <Image src={imgFour} width={100} />
+          </div>
+          <div className={styles.rocketBuilder}></div>
+        </div>
       </main>
     </div>
   );
