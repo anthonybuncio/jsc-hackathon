@@ -41,7 +41,7 @@ export default function Home() {
 
       <main className={styles.planetsMain}>
         <div className={styles.planetsQuestion}>
-          <h1>{planetData.question}</h1>
+          <h1>{planetData[0].question}</h1>
         </div>
         <div className={styles.planetsAnswers}></div>
       </main>

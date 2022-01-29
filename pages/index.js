@@ -14,18 +14,44 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.homeHeader}>
           <div>
-            <h1>Ready, Set, STEM</h1>
+            <h1 className={styles.homeTitle}>Ready, Set, STEM</h1>
           </div>
           <div>
             <ul className={styles.linksList}>
               <li className={styles.linkItem}>
-                <Link href="/community" passHref>
-                  <button className={styles.linkButton}>Community</button>
+                <Link href="/" passHref>
+                  <button className={styles.linkButton}>Home</button>
                 </Link>
               </li>
               <li className={styles.linkItem}>
-                <Link href="/bootcamps" passHref>
-                  <button className={styles.linkButton}>Bootcamps</button>
+                <Link href="/our-vision" passHref>
+                  <button className={styles.linkButton}>Our Vision</button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/why-stem" passHref>
+                  <button className={styles.linkButton}>Why STEM?</button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/community-outreach" passHref>
+                  <button className={styles.linkButton}>
+                    Community Outreach
+                  </button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/stars" passHref>
+                  <button className={styles.linkButton}>
+                    Reach for the Stars Stories
+                  </button>
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link href="/nasa-camp" passHref>
+                  <button className={styles.linkButton}>
+                    NASA Summer Camp
+                  </button>
                 </Link>
               </li>
               <li className={styles.linkItem}>
