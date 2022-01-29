@@ -13,11 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div>
-          <h1>Ready, Set, STEM</h1>
-        </div>
-        <div>
           <Link href="/6-8/rockets" passHref>
-            <button className={styles.button}>
+            <button className={styles.gameButton}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Rockets</h1>
                 <h2 className={styles.gameSub}>Aerospace Engineering</h2>
@@ -25,7 +22,7 @@ export default function Home() {
             </button>
           </Link>
           <Link href="/6-8/matching" passHref>
-            <button className={styles.button}>
+            <button className={styles.gameButton}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Word Match</h1>
                 <h2 className={styles.gameSub}>Job 2</h2>
@@ -33,7 +30,7 @@ export default function Home() {
             </button>
           </Link>
           <Link href="/6-8/planets" passHref>
-            <button className={styles.button}>
+            <button className={styles.gameButton}>
               <div className={styles.gameContainer}>
                 <h1 className={styles.gameHeader}>Planets</h1>
                 <h2 className={styles.gameSub}>Job 3</h2>

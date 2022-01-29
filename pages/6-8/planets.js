@@ -31,6 +31,8 @@ const planetData = [
 ];
 
 export default function Home() {
+  const [correctCount, setCorrectCount] = useState(0);
+  console.log(Math.floor(Math.random() * planetData.length));
   return (
     <div className={styles.container}>
       <Head>
@@ -43,7 +45,11 @@ export default function Home() {
         <div className={styles.planetsQuestion}>
           <h1>{planetData[0].question}</h1>
         </div>
-        <div className={styles.planetsAnswers}></div>
+        <div className={styles.planetsAnswers}>
+          {planetData[0].answers.map((ans) => {
+            return <button key={ans}>{ans}</button>;
+          })}
+        </div>
       </main>
     </div>
   );
