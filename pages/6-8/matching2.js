@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         <div>
           <video
-            src={require('../../public/interview-wordmatch.mp4')}
+            src={require('../../public/wordmatch-interview.mp4')}
             autoPlay
           />
         </div>
