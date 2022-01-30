@@ -11,7 +11,7 @@ export default function Home() {
         <div className={styles.visionContainer}>
           <h1 className={styles.visionTitle}>
             Directing underrepresented youths to community outreach program and
-            camps
+            camps.
           </h1>
           <div>
             <ul>
@@ -24,13 +24,13 @@ export default function Home() {
               <li>
                 <span>
                   Have your school partner with us to have annual field trips to
-                  NASA centers
+                  NASA centers.
                 </span>
                 <button>Learn More</button>
               </li>
               <li>
                 <span>
-                  Connect with STEM-driven students in your local community
+                  Connect with STEM-driven students in your local community.
                 </span>
                 <button>Learn More</button>
               </li>
