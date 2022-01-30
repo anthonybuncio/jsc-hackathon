@@ -10,9 +10,10 @@ export default function Home() {
         <div className={styles.visionContainer}>
           <h1 className={styles.visionTitle}>Our Vision</h1>
           <p className={styles.visionP}>
-            Create an easily accessible product that uses "Narratives Instead of
-            Numbers" to inspire students to enter and stay in the STEM pipeline,
-            ensuring diversity and inclusion for future generations.
+            Create an easily accessible product that uses &quot;Narratives
+            Instead of Numbers&quot; to inspire students to enter and stay in
+            the STEM pipeline, ensuring diversity and inclusion for future
+            generations.
           </p>
         </div>
       </main>
