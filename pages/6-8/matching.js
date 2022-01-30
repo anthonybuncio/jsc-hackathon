@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../../styles/Matching.module.css';
 import React, { useState } from 'react';
 
@@ -14,18 +15,43 @@ const matchingData = [
 ];
 
 export default function Home() {
-  const [current, setCurrent] = useState(null);
+  const [numClicked, setNumClicked] = useState(0);
+  const [textColorA, setTextColorA] = useState('black');
+  const [textColorB, setTextColorB] = useState('black');
+  const [textColorC, setTextColorC] = useState('black');
+  const [textColorD, setTextColorD] = useState('black');
+  const [textColorE, setTextColorE] = useState('black');
 
-  let storeWord = function (e) {
-    console.log(e.target.value);
-    if (current) {
-    } else {
-      setCurrent(e.target.value);
-    }
+  let addWord = function (e) {
+    setNumClicked((numClicked += 1));
   };
 
-  let storeDef = function (e) {
-    console.log(e.target.value);
+  let addDef = function (e) {
+    setNumClicked((numClicked += 1));
+
+    // if (numClicked % 2 === 0) {
+    //   setTextColorA('green');
+    // } else if (numClicked % 4 === 0) {
+    //   setTextColorB('green');
+    // } else if (numClicked % 6 === 0) {
+    //   setTextColorC('green');
+    // } else if (numClicked % 8 === 0) {
+    //   setTextColorD('green');
+    // } else if (numClicked % 10 === 0) {
+    //   setTextColorE('green');
+    // }
+
+    if (numClicked % 10 === 0) {
+      setTextColorE('green');
+    } else if (numClicked % 8 === 0) {
+      setTextColorD('green');
+    } else if (numClicked % 6 === 0) {
+      setTextColorC('green');
+    } else if (numClicked % 4 === 0) {
+      setTextColorB('green');
+    } else {
+      setTextColorA('green');
+    }
   };
 
   return (
@@ -38,33 +64,43 @@ export default function Home() {
 
       <main className={styles.matchingMain}>
         <div className={styles.wordContainer}>
-          {matchingData
-            .sort(() => Math.random() - 0.5)
-            .map((word) => {
-              return (
-                <button
-                  onClick={storeWord}
-                  value={word[0]}
-                  key={word[0]}
-                  className={current && current === word[0] ? 'selected' : ''}
-                >
-                  {word[0]}
-                </button>
-              );
-            })}
+          <button onClick={addWord} style={{ color: textColorA }}>
+            Density
+          </button>
+          <button onClick={addWord} style={{ color: textColorB }}>
+            Gravity
+          </button>
+          <button onClick={addWord} style={{ color: textColorC }}>
+            Matter
+          </button>
+          <button onClick={addWord} style={{ color: textColorD }}>
+            Potential Energy
+          </button>
+          <button onClick={addWord} style={{ color: textColorE }}>
+            Speed
+          </button>
         </div>
         <div className={styles.definitionContainer}>
-          {matchingData.map((definition) => {
-            return (
-              <button
-                onClick={storeDef}
-                value={definition[1]}
-                key={definition[1]}
-              >
-                {definition[1]}
-              </button>
-            );
-          })}
+          <button onClick={addDef} style={{ color: textColorD }}>
+            energy stored by a body or system by virtue of its position
+          </button>
+          <button onClick={addDef} style={{ color: textColorC }}>
+            that which has mass and occupies space
+          </button>
+          <button onClick={addDef} style={{ color: textColorB }}>
+            the force of attraction between masses
+          </button>
+          <button onClick={addDef} style={{ color: textColorE }}>
+            the rate of which something happens
+          </button>
+          <button onClick={addDef} style={{ color: textColorA }}>
+            amount per unit size
+          </button>
+        </div>
+        <div>
+          <Link href="/6-8/matching2" passHref>
+            <button>Watch Interview</button>
+          </Link>
         </div>
       </main>
     </div>

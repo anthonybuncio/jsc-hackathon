@@ -59,9 +59,48 @@ export default function Home() {
                 objectFit="contain" // Scale your image down to fit into the container
               />
             </div>
-            <Image src={imgTwo} width={100} />
-            <Image src={imgThree} width={100} />
-            <Image src={imgFour} width={100} />
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '20%',
+              }}
+            >
+              <Image
+                alt="Image Alt"
+                src={imgTwo}
+                layout="fill"
+                objectFit="contain" // Scale your image down to fit into the container
+              />
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '20%',
+              }}
+            >
+              <Image
+                alt="Image Alt"
+                src={imgThree}
+                layout="fill"
+                objectFit="contain" // Scale your image down to fit into the container
+              />
+            </div>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '20%',
+              }}
+            >
+              <Image
+                alt="Image Alt"
+                src={imgFour}
+                layout="fill"
+                objectFit="contain" // Scale your image down to fit into the container
+              />
+            </div>
           </div>
           <div className={styles.rocketBuilder}></div>
         </div>

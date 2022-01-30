@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../../styles/Planets.module.css';
 import { useState } from 'react';
 
@@ -38,6 +39,11 @@ export default function Home() {
           <button onClick={setColor} value="Earth" style={{ color: textColor }}>
             Earth
           </button>
+        </div>
+        <div>
+          <Link href="/6-8/planets2" passHref>
+            <button>Next Question</button>
+          </Link>
         </div>
       </main>
     </div>

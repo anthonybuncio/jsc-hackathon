@@ -1,21 +1,7 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../../styles/Planets.module.css';
 import { useState } from 'react';
-
-const planetData = [
-  {
-    question:
-      'Only planet not to be named after a Greek or Roman deity, it was formed 4.54 billion years ago, the densest planet in the solar system',
-    correct: 'Earth',
-    answers: ['Venus', 'Mars', 'Neptune', 'Earth'],
-  },
-  {
-    question:
-      'Home to the tallest mountain in the solar system (Olympus Mons), has the largest dust storms in the solar system, has 2 small moons (Phobos and Deimos)',
-    correct: 'Mars',
-    answers: ['Venus', 'Jupiter', 'Earth', 'Mars'],
-  },
-];
 
 export default function Home() {
   const [textColor, setTextColor] = useState('black');
@@ -53,6 +39,15 @@ export default function Home() {
           <button onClick={setColor} value="Earth">
             Earth
           </button>
+        </div>
+        <div>
+          <Link
+            href="/6-8/planets3
+          "
+            passHref
+          >
+            <button>Watch Interview</button>
+          </Link>
         </div>
       </main>
     </div>
