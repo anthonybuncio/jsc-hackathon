@@ -11,7 +11,7 @@ export default function Home() {
           <div className={styles.starsJob}>
             <h1 className={styles.starsTitle}>
               Meet Alex, a Data Scientist and Machine Learning Practitioner with
-              NASA's Earth Science and Remote Sensing Unit.
+              NASA&apos;s Earth Science and Remote Sensing Unit.
             </h1>
             <div className={styles.videoContainer}>
               <video
