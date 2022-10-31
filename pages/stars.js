@@ -15,7 +15,7 @@ export default function Home() {
             </h1>
             <div className={styles.videoContainer}>
               <video
-                src={require('../public/rocket-interview.mp4')}
+                src={require('../public/rocket-interview-r.mp4')}
                 autoPlay
                 controls
               />
@@ -27,16 +27,16 @@ export default function Home() {
               Design and Space architecture at NASA.
             </h1>
             <div className={styles.videoContainer}>
-              <video src={require('../public/planet-interview.mp4')} controls />
+              <video src={require('../public/planet-interview-r.mp4')} controls />
             </div>
           </div>
           <div className={styles.starsJob}>
             <h1 className={styles.starsTitle}>
-              Meet Nate, a Pointing Flight Controller at NASA.
+              Meet Nate, an ISS Pointing Flight Controller at NASA.
             </h1>
             <div className={styles.videoContainer}>
               <video
-                src={require('../public/wordmatch-interview.mp4')}
+                src={require('../public/wordmatch-interview-r.mp4')}
                 controls
               />
             </div>

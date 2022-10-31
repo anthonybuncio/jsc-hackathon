@@ -73,7 +73,12 @@
 }
 
 .starsJob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin: 10px;
+  width: 100%;
 }
 .starsTitle {
   color: white;
@@ -81,5 +86,6 @@
 }
 
 .videoContainer video {
+  height: 500px;
   min-height: 400px;
 }
